@@ -1,29 +1,106 @@
-body,html{
-  background-color: #A06E52;
-},
-
-
-.App {
-  text-align: center;
+body, html {
+  font-family: 'Lato', sans-serif;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.navbar {
+  background-color: white;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.content {
+  margin-top: 80px;
   color: white;
+  display: flex;
+  justify-content: space-around;
 }
 
-.App-intro {
-  font-size: large;
+.welcome {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 3.5em;
+}
+.firstCont {
+  height: 800px;
+  /*background-color: blue;*/
+  background-image: url('https://hd.unsplash.com/photo-1429728001698-8ba1c4c64783');
+  background-size: 1300px;
+}
+.secondCont {
+  background-image: url('http://ecx.images-amazon.com/images/I/61LwvDGZigL._SL1000_.jpg');
+  background-size: 800px;
+  color: lightgrey;
+}
+.thirdCont {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.navbar-brand {
+  padding-left: 55px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+div.newItems {
+  height: 375px;
+  background-image: url('http://www.cad-eauonline.com/wp-content/uploads/2015/04/MG_1161.jpg');
+  background-size: cover;
+  /*color: #59D8E5;*/
+  display: flex;
+  align-items: flex-end;
+}
+
+.callToAction{
+  background-image: url('https://images.unsplash.com/photo-1473949103155-d89f3aa93cf1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=b8d60f3a1c7c40f9981d2bb00e476559');
+  background-size: cover;  
+  height: 375px;
+}
+
+.callToAction button {
+  font-size: 1.5em;
+  color: firebrick;
+  border: 1px solid firebrick;
+  transition: 500ms;
+}
+.callToAction button:hover {
+  color: white;
+  border: 1px solid firebrick;
+  background-color: firebrick;
+}
+.errorPage {
+  height: 100vh;
+  background-image: url("https://hd.unsplash.com/photo-1445206839590-883f6a81c3c6");
+  background-size: cover;
+  padding-top: 100px;
+  color: white;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: center;*/
+}
+.errorPage h1 {
+  font-size: 125px;
+  font-weight: 600;
+}
+.errorPage h2 {
+  font-weight: 300;
+}
+.rounded {
+  border-radius: 2px;
+}
+
+.aboutHS {
+  margin-left: 30px;
+}
+
+.footerLi {
+  display: inline;
+  margin-left: 20px;
+}
+
+a.bottomLinks {
+  text-decoration: none;
+}
+a.presented {
+  text-decoration: none;
+}
+
+.presented {
+  font-weight: 500;
+  font-size: 1.2em;
 }
