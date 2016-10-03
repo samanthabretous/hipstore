@@ -98,7 +98,6 @@ let data = {
 };
 
 
-
 data.getApparel = function(){
 	return this.apparel;
 };
