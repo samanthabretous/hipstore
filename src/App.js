@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router,Route,Link,hashHistory} from 'react-router';
-
 import Apperal from './apperal';
 import data from '../data.js';
 
@@ -19,11 +17,8 @@ var App = React.createClass({
 });
 
 ReactDOM.render(
-<Router history={hashHistory}>
-	<Route path="/" component={App}/>
-	<Route path="/apperal" component={Apperal}/>
-</Router>,
-  document.getElementById('root')
+<App/>,
+document.getElementById('root')
 );
 
 
