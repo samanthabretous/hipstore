@@ -1,14 +1,21 @@
-// import React from 'react';
-// import data  from './data';
+import React from 'react';
+import data from './data';
 
-// var Products = React.createClass({
-// 	getInitialState:function(){
-// 		return {data:null}
-// 	},
+const ProductPage = React.createClass({
+	getInitalState:function(){
+		return{data:null}
+	},
+	componentDidMount:function(){
+		this.setState({data:data.getApparel()})
+		console.log(data, 'this is the data object');
+	},
+  render:function(){
+    return (
+      <div>
+      	<h1>Products</h1> 
+      </div>
+    )
+  }
+});
 
-// 	ComponentDidMount:function(){
-// 		this.setState({data:data.})
-// 	},
-
-
-// })
+export default ProductPage;
