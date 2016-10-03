@@ -1,17 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router,Route,Link,hashHistory} from 'react-router';
 
-var HelloWorld = React.createClass({
+import Apperal from './apperal';
+import data from '../data.js';
+
+
+
+var App = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>Hello World!</h1>
+        <h1 id="items">Products</h1>
+        {this.props.children}
       </div>
     )
   }
-})
+});
 
 ReactDOM.render(
-  <HelloWorld />,
+<Router history={hashHistory}>
+	<Route path="/" component={App}/>
+	<Route path="/apperal" component={Apperal}/>
+</Router>,
   document.getElementById('root')
 );
+
+

@@ -53,8 +53,16 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1",
+    "webpack": "^1.13.2"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -83,5 +91,18 @@
     ],
     "testEnvironment": "node",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js|jsx)$"
-  }
+  },
+  "description": "## Setup - Start by cloning the simple react setup: https://github.com/nmadd/simple-react-setup - Install Bootstrap using `npm install bootstrap --save`, and import it into you `App.js` file using `import 'bootstrap/dist/css/bootstrap.css';` - npm install react-router - IMPORTANT: If you run into issues or have questions while making your project, post them here so we can all try to help out: https://github.com/C4Q/AC3.1/issues",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twilsonpierce/hipstore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twilsonpierce/hipstore/issues"
+  },
+  "homepage": "https://github.com/twilsonpierce/hipstore#readme"
 }
