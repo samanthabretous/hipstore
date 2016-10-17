@@ -1,11 +1,12 @@
 import React from 'react';
 import StarRatingComponent from 'react-star-rating-component';
+import {SocialIcon} from 'react-social-icons';
 
 
 const ProductPage = React.createClass({ 
   //Getting the ratings from users 
   getInitialState:function(){
-    return({rating: 0})
+    return({rating: 0,qty:0})
   },
   handleChange:function(newRating){
     this.setState({rating:newRating});
@@ -29,18 +30,23 @@ const ProductPage = React.createClass({
   onStarClick(nextValue, prevValue, name) {
       this.setState({rating: nextValue});
   },
-  render: function(){
-
-    // display social media icons
-    let socialMedia = ["twitter", "facebook", "tumblr", "pinterest"]
-    let socialIcon = socialMedia.map((social,i) =>
-      <a href="#" key={i} title={social}><i className={"fa fa-" + social}></i></a>
-    )
-
-    let dropdown = []
-    for(var i = 1; i < 6; i++){
-      dropdown.push(<option key={i} value={i}>{i}</option>)
+  onAddClick(e){
+    var qty = this.state.qty;
+    qty++;
+    if(qty > 5){
+      qty = 5
     }
+    this.setState({qty:qty})
+  },
+  onSubtractClick(e){
+     var qty = this.state.qty;
+      qty--;
+      if(qty < 1){
+      qty = 1
+    }
+    this.setState({qty:qty})
+  },
+  render: function(){
 
     let item = this.findItem()
     return (
@@ -63,29 +69,31 @@ const ProductPage = React.createClass({
             <p className="itemDetail ">{item[0].description}</p>
           </div>
 
-
           <div className="rating">
+              <hr/>
+                <p>Rate It!:</p>
                 <StarRatingComponent 
                     name="rate1" 
                     value={this.state.rating}
                     onStarClick={this.onStarClick}
                 />
-              {this.state.rating ? <span>"Thanks for rating"</span> : null}
+              {this.state.rating ? <span>"Thank You"</span> : null}
           </div>
-
-
-
           <div className="icon detailRow">
-            {socialIcon}
+            <SocialIcon url="http://facebook.com/" color="#EDD834" style={{ height: 25, width: 25 }} />
+            <SocialIcon url="http://twitter.com/" color="#4CD4B0" style={{ height: 25, width: 25 }}/>
+            <SocialIcon url="http://pinterest.com/" color="#7D1424" style={{ height: 25, width: 25 }}/>
+            <SocialIcon url="http://instagram.com/"color="#F24D16" style={{ height: 25, width: 25 }} />
           </div>
         
             <div className="features detailRow">
-            <select>
-              {dropdown}
-            </select>
-            <button onClick={this.addItemToCart} type="button"className="btn btn-default" id="targbut">Add To Bag</button>
 
+            <button onClick={this.onSubtractClick}type="button" className="btn btn-default" id="subtract">-</button>
+            <h4>{this.state.qty}</h4>
+            <button onClick={this.onAddClick}type="button" className="btn btn-default" id="add">+</button>
+            <button onClick={this.addItemToCart} type="button"className="btn btn-default" id="targbut">Add To Bag</button>
           </div>
+          <hr/>
         </div>
 
       </div>

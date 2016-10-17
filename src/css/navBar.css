@@ -95,6 +95,10 @@
   height: auto;
 }
 
+.mainLogo a:hover{
+  background: transparent;
+}
+
 .mainLogo img {
   width:100%;
   height: auto;
